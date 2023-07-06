@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_users",
+  "info": {
+    "singularName": "app-user",
+    "pluralName": "app-users",
+    "displayName": "AppUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "appUsername": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[\\w\\d]+$"
+    },
+    "userEmail": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "userPassword": {
+      "type": "password",
+      "required": true,
+      "private": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
